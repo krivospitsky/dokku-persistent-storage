@@ -23,8 +23,8 @@ if [[ -f "$PERSISTENT_FILE_PATH" ]]; then
   done < $PERSISTENT_FILE_PATH
 fi
 
-for DIR in `ls /home/dokku/staticfiles/$APP`; do
-    output="$output -v /home/dokku/staticfiles/$APP/$DIR/:/app/public"
+for DIR in `ls /home/dokku/static_files/$APP`; do
+    output="$output -v /home/dokku/static_files/$APP/$DIR/:/app/public"
 done
 
 echo "$STDIN$output"
