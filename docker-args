@@ -24,7 +24,7 @@ if [[ -f "$PERSISTENT_FILE_PATH" ]]; then
 fi
 
 for DIR in `ls /home/dokku/static_files/$APP`; do
-    output="$output -v /home/dokku/static_files/$APP/$DIR/:/app/public"
+    output="$output -v /home/dokku/static_files/$APP/$DIR/:/app/public/$DIR/"
 done
 
 echo "$STDIN$output"
