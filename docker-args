@@ -8,7 +8,7 @@ PERSISTENT_FILE_PATH="$DOKKU_ROOT/$APP/$PERSISTENT_FILE"
 
 output=""
 if [[ "$PHASE" != "build" ]]; then
-	if [[ -f "$PERSISTENT_FILE_PATH" ]]
+	if [[ -f "$PERSISTENT_FILE_PATH" ]]; then
 	  DONE=false
 	  until $DONE; do
 	    read line || DONE=true
